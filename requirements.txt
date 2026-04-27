@@ -3,7 +3,7 @@ flask-cors
 flask-socketio
 python-socketio
 python-engineio
-eventlet==0.40.0
+eventlet==0.40.3
 bcrypt
 python-jose
 gunicorn
