@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MUD GAME</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🌧️ MATRIX BACKGROUND -->
+<canvas id="matrix"></canvas>
+
+<div class="terminal">
+    <canvas id="map" width="400" height="400"></canvas>
+
+    <pre id="output"></pre>
+
+    <input id="input" placeholder="help / north / south / east / west / hack">
+</div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="matrix.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>
