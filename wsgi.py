@@ -1,4 +1,3 @@
-from manage import app, socketio
+from app import create_app
 
-if __name__ == "__main__":
-    socketio.run(app)
+app = create_app()
