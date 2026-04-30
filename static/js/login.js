@@ -13,7 +13,17 @@ function send(url, isLogin) {
         body: `username=${username.value}&password=${password.value}`
     })
     .then(async res => {
-        let data = await res.json();
+
+    let text = await res.text();
+
+    let data;
+    try {
+        data = JSON.parse(text);
+    } catch (e) {
+        console.log("SERVER NOT JSON:", text);
+        document.getElementById("msg").innerText = "Server error";
+        return;
+    }
 
         if (data.status === "ok") {
 
