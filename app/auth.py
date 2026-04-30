@@ -25,7 +25,7 @@ def login_page():
 @auth_bp.route("/login", methods=["POST"])
 def login():
     try:
-        db = get_db(DB_PATH)
+        db = get_db()
 
         user = db.execute(
             "SELECT * FROM users WHERE username=? AND password=?",
@@ -49,7 +49,7 @@ def login():
 @auth_bp.route("/register", methods=["POST"])
 def register():
     try:
-        db = get_db(DB_PATH)
+        db = get_db()
 
         db.execute(
             "INSERT INTO users (username, password) VALUES (?, ?)",
